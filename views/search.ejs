@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="/">
+    <script src="jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="./css/searchcss.css">
+    <script src="homecommonjs.js"></script>
+</head>
+<body>
+    <div class="homenavbar"> <%- include('./partial/nav.ejs')%></div>
+    <div id="searchMainContainer">
+
+        <div id="searchTitle"><div class="titlecontent"><%=title%> </div></div>
+        <div id="searchImage">
+            <div id="image-display-container">   
+
+                <%for(var i=0;i<imgsrc.length;i++){%>                 
+                   <div class="displayImage">
+                       <img src="<%=imgsrc[i].photo_url%>" >
+                       <div class="overlaydownload">
+                           <div class="downloadi">
+                               <img src="./icons/downloadicon.png" class="downloadicon">
+                               <div class="subdownloadi"></div>
+                           </div>
+                       </div>
+                       
+                   </div>
+                 <%}%>
+                   
+            </div>
+        </div>
+    </div>
+</body>
+</html>

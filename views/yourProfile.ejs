@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="/">
+    <link rel="stylesheet" href="./css/yourprofilecss.css">
+    <script src="jquery-3.6.0.js"></script>
+    <script src="yourprofilejs.js"></script>
+    <script src="homecommonjs.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <%- include('./partial/nav.ejs')%>
+    </div>
+    <div class="profilecontainer">
+        <div id="your-profile">
+            <div id="profile-header">
+                <div id="avatar">
+                    <% if(Avatar){ %>
+                        <img src="<%=Avatar%>" >
+                        <% } else { %>
+                            <img src="./Avatar/no-profile-pic.jpg" alt="no-profile-pic" >
+                            <% } %>
+                </div>
+               <div class="subprofileheader"> <div class="headername">
+                    <h2>
+                        <%=fname%> <%=lname%>
+                    </h2>
+                </div>
+                <div class="headerChangeProfile">
+                    <p><a href="/edit-profile">change your profile</a></p>
+                </div></div>
+            </div>
+          
+            <div id="userPhotosInfo">
+                <div class="linknav">
+                    <div class="totalimg">
+                        <%=image.length%> photos
+                    </div>
+                    <div class="collections">Collection</div>
+                </div>
+                <div id="imagesdisplaymain">
+                    <div id="image-display-container">
+
+                        <%for(var i=0;i<image.length;i++){%>
+
+                            <div class="displayImage">
+                                <img src="<%=image[i].photo_url%>">
+                                <div class="overlaydownload">
+                                    <div class="downloadi"><img src="./icons/downloadicon.png">
+                                        <div class="subdownloadi"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%}%>
+                    </div>
+                    <div id="collectionDisplay">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

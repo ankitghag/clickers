@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="/">
+    <script src="jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="./css/photocss.css">
+    <link rel="stylesheet" href="./css/homenavcss.css">
+    <script src="messageReplyjs.js"></script>
+</head>
+<body>
+    <div class="homenavbar"> <%- include('./partial/nav.ejs')%></div>
+    
+    <div class="MessageFormmain">
+        <div class="messageboxMainContainer">
+            <div class="msgtitle">New Message</div>
+             <div class="to">TO :<div class="rto" style="display:inline"> <%=firstName%> <%=lastName%></div></div>
+             <form id="messageForm">
+                 <div class="replyFrom"><input type="text" value="<%=From%>" name="replyfrom" readonly></div>
+                 <div class="subject"><textarea placeholder="subject"></textarea></div>
+                 <div class="messageBoxContainer"><textarea></textarea></div>
+             <form>
+             <div class="sendcontainer"><div class="send">Send</div></div>
+        </div>
+    
+      </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="/">
+    <link rel="stylesheet" href="./css/yourprofilecss.css">
+</head>
+<body>
+    <div class="navbar"> <%- include('./partial/nav.ejs')%></div>
+    <div class="profilecontainer">
+        <div id="your-profile">
+             <div id="profile-header">  
+                 <div id="avatar" >
+                     <% if(Avatar){ %>
+                     <img src="<%=Avatar%>"  width="100px" height="100px">
+                     <% } else { %>
+                    <img src="./Avatar/no-profile-pic.jpg" alt="no-profile-pic" width="100px" height="100px">
+                    <% } %>
+                 </div>
+                 <div><h2><%=fname%> <%=lname%></h2></div>
+                
+             </div>
+            <div id="userInfo"> 
+                <div></div>
+                 <div></div>
+                 <div></div>
+             </div>
+             <div id="userPhotosInfo">
+                <div class="linknav"> <div class="totalimg"><%=image.length%> photos</div></div>
+                    <div id="image-display-container">
+                        
+                         <%for(var i=0;i<image.length;i++){%>
+           
+                             <div class="displayImage">
+                             <img src="<%=image[i].photo_url%>" >
+                             <div class="overlaydownload"><div class="downloadi"><img src="./icons/downloadicon.png"><div class="subdownloadi"></div></div></div>
+                             </div>
+                        <%}%>
+                    </div>
+                    <div></div>
+             </div>
+        </div>
+    </div>
+</body>
+</html>

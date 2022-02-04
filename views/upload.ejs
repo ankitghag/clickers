@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <base href="/">
+  <script src="jquery-3.6.0.js"></script>
+  <script src="jQuery.tagify.min.js"></script>
+  <script src="uploadjs.js"></script>
+  <link href="tagify.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/uploadcss.css">
+
+
+
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>-->
+  <style>
+    input[type=text] {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="uploadPageMain">
+    <div class="uploadMainContainer">
+      <div class="uploadnav">
+        <div class="cancelform"><img src="./icons/cancelLogo.jpg"></div>
+        <div class="linkhome"><a href="/home">home</a></div>
+      </div>
+      <div class="uploadForm">
+        <form action="/cupload/upload" method="post" enctype="multipart/form-data" id="formphotoupload">
+          <div class="uploadflex">
+            <div class="uploadFormleft">
+              <div class="Description">
+                <p>Start Uploading<br> Your Photos to Pexels</p>
+                <p> Do you have outstanding photos that you want to share with the Pexels community?</p>
+              </div>
+              <div class="selectImage">
+                <label for="myfile">Choose A Photo</label>
+                <input type="file" id="myfile" name="myfile"><br><br>
+
+              </div>
+            </div>
+            <div class="uploadFormRight">
+              <div id="displayImages"></div>
+              <input type="submit" name="submitPhoto">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

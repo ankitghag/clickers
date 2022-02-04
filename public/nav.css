@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+/* body{
+    position:fixed;
+} */
+
+#navCont{
+    width:100%;
+   height:50px;
+    background-color:black;
+    display:flex;
+    flex-direction: row;    
+    position:fixed; 
+   color:white;
+   z-index:1
+}
+ #left{
+     flex-grow:1;
+ }
+
+#right{
+    
+    display:flex;
+    flex-direction: row;
+    flex-grow:3;
+}
+
+#searchbar{
+   
+    display:flex;
+    align-items: center;
+    flex-grow:3;
+    width:100%;
+    height:100%;
+
+    
+}
+
+/* #searchbar form .inputcontainer{
+    width:100%;
+    height:100%;
+} */
+
+#searchbar  form .inputcontainer input[type=search]{
+    margin-left:30px;
+    width:500px;
+    height:45px; 
+    font-size:17px;
+ /*    width:100%;
+    height:100%;
+    */
+    outline:none;
+}
+
+
+
+#rightcontent{
+    flex-grow:1;
+
+}
+
+#rightcontent ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height:100%;
+}
+#rightcontent ul li{
+    width:130px;
+  /*   border:2px solid black; */
+    padding:5px;
+    height:100%;
+   list-style:none;
+}
+
+#rightcontent ul li:hover{
+    background:white;
+    color:black;
+}
+
+#rightcontent ul li:hover a{
+    color:black;
+}
+#rightcontent ul li a{
+    height:100%;
+    font-size:22px;
+    text-decoration: none;
+    display:block;
+    text-align:center;
+    color:white;
+    cursor: pointer;
+}
+
+#rightcontent ul li button{
+     background:none;
+    width:100%;
+    height:100%;
+    font-size:22px;
+    border:none;
+    color:white;
+    text-align:center;
+
+}
+.dropdown {
+display:block;
+position:relative;
+
+}
+
+
+.dropdown .dropdown-content{
+    width:300px;
+    background:white;
+  position: absolute;
+  display:none;
+  z-index:1;
+  color:white;
+  flex-direction:column;
+  padding-left:0px;
+  margin-left:-175px;
+  margin-top:4px;
+
+}
+
+.dropdown:hover .dropdown-content{
+    display:flex;
+}
+.dropdown:hover .dropdown-content .alink{
+    width:100%;
+    height:40px;
+    display: flex;
+ 
+   
+}
+
+.dropdown:hover .dropdown-content .alink:hover{
+    background:rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-content .alink:first-child{
+    margin-top:7px;
+}
+.dropdown .dropdown-content div a{
+    text-decoration: none;
+    width:100%;
+    color:black;
+  
+ 
+    margin:5px;
+    
+}

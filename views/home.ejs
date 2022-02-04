@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <base href="/">
+    <script src="jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="./css/homecss.css">
+
+    <script src="homejs.js"></script>
+  
+</head>
+<body>
+   <div class="homenavbar"> <%- include('./partial/nav.ejs')%></div>
+    <div class="main">
+    <div id="home_background">
+        <img src="./background/homebackground1.jpg" alt="background_img">
+        <div id="background-content">
+                <div id="background-heading">  <p>
+                The best free stock photos & free images shared by creators</p></div>
+                <div id="background-form">
+                 <form action="/search" method="get">
+                     <div class="inputcontainer">
+                    <input type="search" placeholder="search here by keywords" name="searchbar">
+                        </div>
+                </form>
+                 </div>
+        </div>
+
+    </div>
+    <div id="links">
+    <div id="navlink">
+        <li><a href="/home">home</a></li>
+        <li><a href="/discover" id="discover">Discover</a></li>
+        <li><a href="/leaderBoard/allTime">LeaderBoard</a></li>
+        
+    </div>
+    </div>
+    <div id="image-display">
+     <div id="image-display-container">
+        
+        
+      
+        
+          <%for(var i=0;i<result.length;i++){%>
+           
+            <div class="displayImage">
+                <img src="<%=result[i].photo_url%>" >
+                <div class="overlaydownload">
+                    <div class="downloadi">
+                        <img src="./icons/downloadicon.png" class="downloadicon">
+                        <div class="subdownloadi"></div>
+                    </div>
+                </div>
+                
+            </div>
+            <%}%>
+            
+     </div>
+
+     <div class="message">
+        <p></p>
+         </div>
+        </div>
+
+        <div class="loadmoreC">
+        
+            <button type="button"  id="loadmore" name="hideVal" value="loadmore">loadmore</button>
+         
+            
+        </div>
+    </div>
+</div>
+</body>
+</html>

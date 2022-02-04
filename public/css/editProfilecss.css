@@ -1,0 +1,157 @@
+*{
+
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+.navbar{
+    width:100%;
+    height:50px;
+    
+}
+
+.editcontainerMain{
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+
+.edit-container{
+    width:40%;
+    border:2px solid rgb(230, 224, 224);
+    margin-top:40px;
+}
+
+.editTitle{
+    width:100%;
+    margin-top:18px;
+    font-size:20px;
+    display:flex;
+    justify-content: center;
+}
+
+.edit-container form{
+    padding:18px;
+    width:100%;
+}
+
+.profileAvatarmain{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 13px;
+}
+
+#avatar{
+    width:100px;
+    height:100px;
+}
+
+#avatar img{
+    width:100%;
+    height:100%;
+    border:none;
+    border-radius:50%;
+}
+
+.AvatarSelect input[type=file]{
+    display:none;
+}
+
+.AvatarSelect{
+    position: relative;
+    margin-left:10px;
+    width:110px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AvatarSelect label{
+    display:block;
+    width:100%;
+    height:40px;
+    background:green;
+    color:white;
+    text-align: center;
+    line-height: 40px;
+
+
+}
+
+.userdetails{
+    width:100%;
+}
+
+.userdetails label{
+    display:block;
+    font-size:16px;
+}
+
+.userdetails input{
+    width:100%;
+    height:50px;
+    font-size:16px;
+    padding-left:6px;
+    margin-top:10px;
+}
+
+#edit-pssword{
+    width:100%;
+}
+#edit-pssword h3{
+    font-size: 16px;
+}
+#edit-pssword a{
+    display:block;
+    margin-top:10px;
+}
+
+
+#deleteAccount{
+    width:100%;
+}
+#deleteAccount h3{
+    font-size: 16px;
+}
+#deleteAccount a{
+    display:block;
+    margin-top:10px;
+}
+
+#deleteAccount a:hover{
+   cursor: pointer;
+   color:blue;
+}
+
+.editformbtn{
+    width:100%;
+   
+    display:flex;
+    flex-direction: row;
+}
+
+.editformbtn div{
+    width:100px;
+    height:40px;
+
+}
+
+.editformbtn div button{
+    border:none;
+    width:100%;
+    height:100%;
+}
+
+.editformbtn div:first-child button{
+    background: green;
+    color:white;
+   
+}
+
+.editformbtn div:last-child button{
+  margin-left:20px;
+  background:rgb(196, 204, 196)
+   
+}

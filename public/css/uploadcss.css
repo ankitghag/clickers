@@ -1,0 +1,253 @@
+*{
+
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+body{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    position:fixed
+}
+
+#uploadPageMain{
+    width:100%;
+    height:100%;
+    background-image: url("../background/uploadBackground.jpg");
+    background-size:100% 100%;
+    position:relative;
+}
+
+#uploadPageMain .uploadMainContainer{
+    width:100%;
+    height:100%;
+  /*   background:rgba(161, 43, 43, 0.5); */
+    color:white;
+    position: absolute;
+    right:0px;
+}
+
+.uploadnav{
+    width:100%;
+    height:10%;
+    display:flex;
+    flex-direction: row;
+    margin-top: 10px;
+    justify-content: end;
+}
+
+.uploadnav .linkhome{
+    width:70px;
+    height:40px;
+    background:white;
+    color:white;
+    border:none;
+    border-radius: 25px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+ 
+}
+
+.uploadnav .cancelform{
+    width:40px;
+    height:40px;
+    border:none;
+    background:white;
+    border-radius:50%;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cancelform img{
+    width:50%;
+    height:50%;
+    
+ /*    border:none;
+    border-radius:50%; */
+}
+
+.uploadForm{
+    width:100%;
+    height:80%;
+    position:relative;
+
+}
+
+form{
+    width:100%;
+    height:100%
+}
+
+form .uploadflex{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: row;
+}
+
+form .uploadflex .uploadFormleft{
+    width:50%;
+    height:80%;
+    background-image: linear-gradient(to right, rgba(238, 9, 121,0.5) 0%, rgba(255, 106, 0,0.5)  51%, rgba(238, 9, 121,0.5)  100%);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    border:none;
+    border-radius:0 25px 25px 0;
+}
+
+
+
+.uploadFormleft .Description{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  
+}
+
+.uploadFormleft .Description p{
+    font-size:35px;
+    color:white;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    
+}
+
+.uploadFormleft .Description p:first-child{
+    font-size:45px;
+    color:white;
+    font-weight: bold;
+    
+}
+
+.uploadFormleft .selectImage label{
+    display:block;
+    width:150px;
+    height:45px;
+     background:rgb(255, 145, 0); 
+     /* box-shadow: -10px -6px 15px rgba(0, 0, 0, 0.603); */
+  /*  background-image:linear-gradient(to right, rgba(146, 11, 11, 0.897) 40%,  rgb(161, 68, 15)  100%); */
+
+    border:none;
+    border-radius:25px;
+  text-align: center;
+  padding: 14px 0;
+  margin-left:10px;
+}
+
+.uploadFormleft .selectImage input[type="file"]{
+    visibility: hidden;
+     
+}
+
+
+form .uploadflex .uploadFormRight{
+     position:absolute;
+    right:0px; 
+    display:none;
+    width:90%;
+    height:100%;
+    background-image: linear-gradient(to right, rgba(238, 9, 121,0.6) 0%, rgba(255, 106, 0,0.6)  51%, rgba(238, 9, 121,0.6)  100%);
+}
+
+#displayImages{
+width:100%;
+height:85%;
+display:flex;
+flex-direction: row;
+}
+
+/*  .uploadFormRight input[type="submit"]{
+    display:none;
+}  */
+
+.imagetagContainer{
+  
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:row;
+    background:rgba(0, 0, 0,0.3);
+    padding:2%;
+}
+
+#imageContainer{
+    width:40%;
+    height:100%;
+
+}
+#imageContainer img{
+    width:100%;
+     height:100%;
+   
+  
+    
+}
+
+.imagetagContainer .imageMetadata{
+    width:49%;
+    margin-left:10px;
+}
+.imagetagContainer .imageMetadata #relatedtags{
+    width:100%;
+
+}
+
+.imagetagContainer .imageMetadata #relatedtags p{
+    font-size:25px;
+    margin-bottom:3px;
+}
+
+.imagetagContainer .imageMetadata .Imagecategories{
+    width:100%;
+    margin-top:40px;
+}
+
+.imagetagContainer .imageMetadata .Imagecategories div p{
+    font-size:25px;
+}
+
+.imagetagContainer .imageMetadata .Imagecategories input[type="radio"]{
+    display:none;
+}
+
+.imagetagContainer .imageMetadata .Imagecategories .categorieslabel{
+    display:flex;
+    flex-wrap: wrap;
+}
+.imagetagContainer .imageMetadata .Imagecategories div label{
+    display:inline-block;
+    padding:10px;
+    min-width:80px;
+    height:40px;
+    border:none;
+    border-radius:25px;
+    background:orange;
+    margin-right:8px;
+    margin-top:8px;
+    text-align:center
+  
+}
+
+.imagetagContainer .imageMetadata .Imagecategories input[type=radio]:checked+label {
+    background:rgb(255, 124, 1);
+}
+
+.uploadFormRight input[type=submit]{
+    color:white;
+    font-size:18px;
+    width:10%;
+    height:8%;
+    background:crimson;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-top:5px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="/">
+    <link href="./css/leaderboardcssmain.css" rel="stylesheet" type="text/css">
+    <link href="./css/leaderboardcssAllTime.css" rel="stylesheet" type="text/css">
+    <script src="jquery-3.6.0.js"></script>
+    <script src="leaderboardjs.js"></script>
+</head>
+<body>
+    <div class="homenavbar"> <%- include('./partial/nav.ejs')%></div>
+    <div id="links">
+        <div id="navlink">
+            <li><a href="/home">home</a></li>
+            <li><a href="#">Discover</a></li>
+            <li><a href="/leaderBoard/allTime">LeaderBoard</a></li>
+            
+        </div>
+        </div>
+    <div class="leadboardTitle"><h1>LeaderBoard</h1><p>Ranking of contributor as per most views on there upload all-time</p></div>
+    <div id="durnavlink">
+        <a href="/leaderBoard" class="last30day">Last 30 days</a>
+        <a href="/allTime" class="alltime">All Time</a>
+    </div>
+    <div id="maincontainer">
+        <%for(let i=0;i<result.length;i++){%>
+        <div class="rankingmaincontainer">
+            <div class="rankingtotalview"><div class="rank"><%=i+1%></div><div class="totviews"><%=result[i].totalviews%><br>views</div></div>
+            <div class="rankerAvatarurl">
+               
+                    <% if(result2[i][0].AvatarUrl){ %>
+                        <a href="/contributor/@<%=result2[i][0].firstName%> <%=result2[i][0].lastName%>"> <img src="<%=result2[i][0].AvatarUrl%>"  width="100px" height="100px"></a>
+                         <% } else { %>
+                             <a href="/contributor/@<%=result2[i][0].firstName%> <%=result2[i][0].lastName%>"> <img src="./Avatar/no-profile-pic.jpg" alt="no-profile-pic" width="100px" height="100px"></a>
+                             
+               <%}%>
+            </div>
+
+            <div class="rankername">
+                <div class="rname"><%=result2[i][0].firstName%> <%=result2[i][0].lastName%></div>
+            </div>
+           
+                <div class="rankerImages">
+               <%for(let j=0;j<result1[i].length;j++){%>
+                     <div class="rimg">  <img src="<%=result1[i][j].photo_url%>"></div>
+                     <div class="linkDiv"><img src="./icons/nextArrowicon.png"><div class="linkDivOverlay"></div></div><div class="linkDivOverlay"></div>
+                <%}%>
+            </div>
+        </div>
+        <%}%>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<%if(Likes=="undefine"||Likes.length==0||Likes==null){%>
+                        
+                            <button type="button" name="likebtn" value="0">0 Likes</button>
+                        
+                          
+                            <%}else{%>
+                                <button type="button" name="likebtn" value="0"><div> <%=JSON.stringify(Likes[0].photolike)%></div> Likes</button>
+                                <%}%> 
+
+
+
+
+                                 <li><button id="uploadl">upload</button></li>
+
+                                 <div class="downloadi">
+                        <img src="./icons/downloadicon.png">
+                        <div class="subdownloadi"></div>
+                    </div>
+
+                    <% if(result3[i].AvatarUrl){ %>
+                        <a href="/contributor/@<%=result3[i].firstName%> <%=result3[i].lastName%>"> <img src="<%=result3[i].AvatarUrl%>"  width="100px" height="100px"></a>
+                         <% } else { %>
+                             <a href="/contributor/@<%=result3[i].firstName%> <%=result3[i].lastName%>"> <img src="./Avatar/no-profile-pic.jpg" alt="no-profile-pic" width="100px" height="100px"></a>
+                             <% } %>
+
+                             <div class="rname">result3[i].firstName%> <%=result3[i].lastName%></div>
+                             <div class="rname"><%=result3[i].firstName%> <%=result3[i].lastName%></div>
+
+                             <img src="<%=result2[i][j].photo_url%>">
+
+                             
+         .btn-grad {background-image: linear-gradient(to right, #ee0979 0%, #ff6a00  51%, #ee0979  100%)}
+         .btn-grad {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
+
+          <% for (let i = 0; i < results.length; i++) {%>
+            <div class="collectionContainermain">
+            <div class="collectionContainer">
+            <div class="collectionBig"> <div class="collectionBigimg"><img src=<%=results[i].categoriesPhoto[0]%>></div></div>
+            <div class="collectionSmall"> 
+                <%for(let j=0;j<results[i].categoriesPhoto.length;j++){%>
+                    <div class="collectionimg"><img src=<%=results[i].categoriesPhoto[j]%>></div>
+                    <%}%>
+               
+           
+            </div>
+             </div>
+             <div class="collectionName"></div>
+             <div class="collecionOver"></div>
+             </div>
+           
+       <%}%>

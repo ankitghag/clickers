@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="/">
+    <link rel="stylesheet" href="./css/photocss.css">
+    <script src="jquery-3.6.0.js"></script>
+    <script src="photojs.js"></script>
+</head>
+<body>
+   
+    <div id="maincontainer">
+        <div class="mainclosetab"><div class="closemain"><img src="./icons/cancelicon.png"><div class="maincloseoverlay"></div></div></div>
+        <div id="photoContainer">
+            <div id="presentPhotoContainer">
+                <div id="presentPhotoDetail">
+                    <div class="detailLeft">
+                    <div class="avatarUrl"> 
+                        <% if(Avatar){ %>
+                           <a href="/contributor/@<%=firstname%> <%=lastname%>"> <img src="<%=Avatar%>"  width="100px" height="100px"></a>
+                            <% } else { %>
+                                <a href="/contributor/@<%=firstname%> <%=lastname%>"> <img src="./Avatar/no-profile-pic.jpg" alt="no-profile-pic" width="100px" height="100px"></a>
+                                <% } %>
+
+                               
+                    </div>
+
+                    <div id="Cdetails">
+                        <div id="Cname"><%=firstname%> <%=lastname%></div>
+                        <div id="Cfollower"><%=cfollower%> followers</div>
+                        </div>
+                        <%if(followStatus=="followed"){%>
+                            <div class="follow">
+                             
+                                <button type="button" name="followbtn" value="follow">followed</button>
+                       </div>
+                            <%}else{%>
+                                <div class="follow">
+                                    <button type="button" name="followbtn" value="follow">follow</button>
+                           </div>
+                                <%}%>
+
+                   
+                    </div>
+                    <div class="detailRight">
+
+                        <%if(likeStatus=="liked"){%>
+                    <div class="alreadylike" >
+                        <%if(Likes=="undefine"||Likes==0||Likes==null){%>
+                        
+                            <button type="button" name="likebtn" value="0"><div id="lnum">0</div> Likes</button>
+                        
+                          
+                            <%}else{%>
+                                <button type="button" name="likebtn" value="0"><div id="lnum"> <%=Likes%></div> Likes</button>
+                                <%}%> 
+                   
+                    </div>
+                    <%}else{%>
+                        <div class="likes">
+                            <%if(Likes=="undefine"||Likes==0||Likes==null){%>
+                            
+                                <button type="button" name="likebtn" value="0"><div id="lnum">0</div> Likes</button>
+                            
+                              
+                                <%}else{%>
+                                    <button type="button" name="likebtn" value="0"><div id="lnum"> <%=Likes%></div> Likes</button>
+                                    <%}%> 
+                       
+                        </div>
+
+                        <%}%>
+                    
+                   
+                    <div class="collectmain">
+                        <button type="button" name="collectbtn" value="collect">collect</button>
+                   </div>
+
+                   <div class="messageC">
+                    <button type="button" name="messagebtn" value="message">Message</button>
+                   </div>
+
+                    <div class="download">
+                       
+                         <a href="/<%=imgfolder%>/<%=imgcategories%>/<%=imgsrc%>" download>Download</a>
+                    </div>
+                    </div>
+                </div>
+                <div id="presentPhoto">
+                   <div class="imgC"> <img src="/<%=imgfolder%>/<%=imgcategories%>/<%=imgsrc%>"></div>
+                    
+               </div>
+               <div id="photoviews"><div class="viewiconimg"><img src="./icons/viewicon.png"></div><p><%=views%> Views</p></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

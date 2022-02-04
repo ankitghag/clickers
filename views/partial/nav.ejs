@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="nav.css">
+    <script src="jquery-3.6.0.js"></script>
+    <script src="syncuploadjs.js"></script>
+    <script src="navjs.js"></script>
+    
+</head>
+
+<body>
+    <div id="navCont">
+        <div id="left"><p>clicker and it logo</p></div>
+        <div id="right">
+            <div id="searchbar">
+                <form action="/search" method="get">
+                    <div class="inputcontainer">
+                   <input type="search" placeholder="search here by keywords" name="searchbar">
+                       </div>
+               </form>
+            </div>
+            <div id="rightcontent">
+                <ul>
+                    <li><a href="#explore">Explore</a></li>
+                   
+                    <% if(navauth){ %>
+                        <li class="dropdown">
+                            <a >profile</a>
+                            <div class="dropdown-content">
+                                <div class="alink"><a href="/your-profile">Your Profile</a></div>
+                                <div class="alink"><a href="/login">Login</a></div>
+                                <div class="alink"><a href="edit-profile" id="editProfile">setting</a></div>
+                                <div class="alink"> <a href="/logout">Logout</a></div>
+                            </div>
+                        </li>
+                       
+                        <li><a id="uploadl">upload</a></li>
+                        <% } else { %>
+                            <li><a href="/contributor/Cregister">upload</a></li>
+                            <li><a class="active" href="/prelogin">join</a></li>
+                            <% } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

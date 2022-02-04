@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="/">
+    <link rel="stylesheet" href="./css/editProfilecss.css">
+    <script src="jquery-3.6.0.js"></script>
+    <script src="edit-profilejs.js"></script>
+    
+</head>
+
+<body>
+    <div class="navbar"> <%- include('./partial/nav.ejs')%></div>
+    <div class="editcontainerMain">
+    <div class="edit-container">
+
+
+              
+                  <div class="editTitle"><h2>Edit Your Profile</h2></div>
+                 <form action="/edit-profile" method="post" id="registrationform" enctype="multipart/form-data" >
+                    <div class="profileAvatarmain">
+                    <div id="avatar" >
+                        <% if(Avatar){ %>
+                            <img src="<%=Avatar%>" >
+                            <% } else { %>
+                                <img src="./Avatar/no-profile-pic.jpg" alt="no-profile-pic">
+                                <% } %></div>
+
+                   <div class="AvatarSelect">  <label for="myfile">Select a file</label>
+                     <input type="file" id="myfile" name="myfile" ><br><br> </div></div>
+       
+            
+            <div class="userdetails" id="edit-firstName"><label for="fname"><b>First Name</b></label>
+                <input type="text" placeholder="Enter first name" value="<%=fname%>" name="fname"><span></span>
+            </div><br>
+
+            <div class="userdetails" id="edit-lastName"><label for="lname"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter Email" value= "<%=lname%>" name="lname"><span></span>
+            </div><br>
+
+            <div class="userdetails" id="edit-email"><label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" value= "<%=email%>" name="email"><span></span>
+            </div><br>
+
+            <div id="edit-pssword"><h3>Password</h3><a href="/edit-profile/changePassword">Change Password</a></div><br>
+
+            <div id="deleteAccount"><h3>delete Account</h3><a>Delete </a></div><br>
+
+            
+            <div class="editformbtn">
+           <div> <button type="submit">update profile</button></div>
+           <div> <button type="reset">cancel</button></div></div>
+
+
+            
+
+
+        </div>
+
+    </form>
+    </div>
+</body>
+
+</html>

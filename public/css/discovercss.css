@@ -1,0 +1,165 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box
+}
+body{
+    width:100%;
+    
+}
+
+.homenavbar{
+    width:100%;
+    height:50px;
+}
+
+.headings{
+    width:100%;
+    height:60px;
+    font-size:25px;
+    margin: 20px 0px;
+    
+}
+.headings p{
+    width:100%;
+    height:100%;
+    text-align: center;
+    font-size:35px;
+    
+}
+
+#CategorisDisplay{
+    width:94%;
+    height:800px;    
+    margin-left:3%;
+    margin-right:3%; 
+    background:white;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    
+ }
+ 
+ #CategorisDisplay .collectionContainermain{
+     width:27%;
+     height:45%; 
+     border:none;
+    position:relative;
+  
+     display:flex;
+     flex-direction: column;
+   
+ }
+ 
+  
+
+  #CategorisDisplay .collectionContainermain{
+     margin-top:40px;
+ } 
+ 
+ #CategorisDisplay .collectionContainermain .collectionContainer{
+     width:100%;
+     height:90%;
+     border:none;
+     border-radius:5px;
+     display:flex;
+     flex-direction: column;
+     justify-content: space-between;
+ }
+ 
+ .collectionContainermain .collectionContainer .collectionBig{
+     width:100%;
+     height:69%;
+     border:none;
+     border-radius:5px;
+ }
+ 
+ .collectionContainermain .collectionContainer .collectionBig .collectionBigimg{
+     width:100%;
+     height:100%;
+ 
+ }
+ 
+ .collectionBigimg img{
+     width:100%;
+     height:100%;
+     border:none;
+     border-radius:10px
+ }
+ 
+ .collectionContainermain .collectionContainer .collectionSmall{
+     width:100%;
+     height:29%;
+     border:none;
+     border-radius:5px;
+     display:flex;
+     flex-direction: row;
+     justify-content:flex-start;
+ }
+ 
+ 
+ .collectionContainermain .collectionContainer .collectionSmall .collectionimg{
+     width:23%;
+     height:100%;
+    
+     
+ }
+ 
+ .collectionContainermain .collectionContainer .collectionSmall .collectionimg:not(:last-child){
+     margin-right:2.66%;
+ }
+ 
+ .collectionContainer .collectionSmall .collectionimg img{
+     width:100%;
+     height:100%;
+     border:none;
+     border-radius:10px;
+     
+ }
+
+ .collectionName{
+     font-size:20px;
+ }
+ 
+ .collectionContainermain .collecionOver{
+     position:absolute;
+     top:0px;
+     left:0px;
+     width:100%;
+     height:100%
+ }
+
+ #links{
+    position:relative;
+    width:100%;
+    height:48px;
+    border-bottom:2px solid rgba(151, 127, 127, 0.1);
+}
+
+#navlink{
+    position:absolute;
+    flex-wrap: wrap;
+width:40%;
+height:100%;
+    left:50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#navlink li{
+    list-style:none;
+}
+#navlink li a{
+    text-decoration: none;
+    color:black;
+    font-size:18px;
+}
+
+#navlink li a:hover{
+    text-decoration: none;
+    color:blue;
+    font-size:18px;
+}
