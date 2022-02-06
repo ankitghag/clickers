@@ -23,7 +23,11 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "nodemon app.js"
+    "test": "nodemon app.js",
+    "start":"node app.js"
+  },
+  "engines" : {
+    "node" : "^14.18.0"
   },
   "author": "",
   "license": "ISC"
